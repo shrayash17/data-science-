@@ -1,0 +1,354 @@
+{
+  "nbformat": 4,
+  "nbformat_minor": 0,
+  "metadata": {
+    "colab": {
+      "provenance": [],
+      "authorship_tag": "ABX9TyMCfVPHs29GcT0LAEuXvZ10",
+      "include_colab_link": true
+    },
+    "kernelspec": {
+      "name": "python3",
+      "display_name": "Python 3"
+    },
+    "language_info": {
+      "name": "python"
+    }
+  },
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "view-in-github",
+        "colab_type": "text"
+      },
+      "source": [
+        "<a href=\"https://colab.research.google.com/github/shrayash17/data-science-/blob/main/lec_6_file_handling\" target=\"_parent\"><img src=\"https://colab.research.google.com/assets/colab-badge.svg\" alt=\"Open In Colab\"/></a>"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": 2,
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "wKj3CGt4g_M3",
+        "outputId": "c4c121e7-f03b-435f-a891-322180e6890d"
+      },
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "11"
+            ]
+          },
+          "metadata": {},
+          "execution_count": 2
+        }
+      ],
+      "source": [
+        "f = open('sample.txt','w')\n",
+        "f.write('hello world')"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "f=open('sample1.txt','w')\n",
+        "f.write('hello bhai ')\n",
+        "f.write('\\n kasa ahes')\n",
+        "f.close()"
+      ],
+      "metadata": {
+        "id": "9UHZrsxNhNMb"
+      },
+      "execution_count": 4,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "f=open('sample.txt','w')\n",
+        "f.write('bhai chnage kelay ')\n",
+        "f.close()"
+      ],
+      "metadata": {
+        "id": "vrY2u8uji8l1"
+      },
+      "execution_count": 5,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "l=['hello \\n','hii shet \\n','kai nay \\n']\n",
+        "f=open('sample.txt','a')\n",
+        "f.writelines(l)\n"
+      ],
+      "metadata": {
+        "id": "Y11iJ5jTi-xj"
+      },
+      "execution_count": 8,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "s={'shrayash' , 'gawade' , 'set'}\n",
+        "f=open('sample1.txt','a')\n",
+        "f.writelines(s)"
+      ],
+      "metadata": {
+        "id": "gRbO7nBT2mge"
+      },
+      "execution_count": 12,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "t=('hello','shrayash','gawade')\n",
+        "\n",
+        "f=open('sample.txt','a')\n",
+        "f.writelines(t)\n",
+        "\n"
+      ],
+      "metadata": {
+        "id": "jxGXJvRz1v7w"
+      },
+      "execution_count": 10,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "l=['intel','bmc','tcs','mastercard']\n",
+        "\n",
+        "f=open('/content/files/new.txt','a')\n",
+        "f.writelines(l)\n"
+      ],
+      "metadata": {
+        "id": "LGnqcgL13r27"
+      },
+      "execution_count": 16,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "f=open('/content/files/new.txt','r')\n",
+        "s= f.read()\n",
+        "print(s)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "O5tBTRQt4aZ9",
+        "outputId": "7c577627-86d9-46e1-8461-fa0d720c72b2"
+      },
+      "execution_count": 17,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "intelbmctcsmastercard\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "c=['google','microsoft']\n",
+        "\n",
+        "f=open('/content/files/new.txt','a')\n",
+        "f.writelines(c)"
+      ],
+      "metadata": {
+        "id": "1cbxmTl44nVb"
+      },
+      "execution_count": 21,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "l=['my name is shrayash \\n','my age is 23 \\n','i m a noob data scientist \\n']\n",
+        "f=open('/content/files/new1.txt','w')\n",
+        "f.writelines(l)"
+      ],
+      "metadata": {
+        "id": "JZInYbpY5BAl"
+      },
+      "execution_count": 23,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "f=open('/content/files/new1.txt','r')\n",
+        "s=f.readline()\n",
+        "s1=f.readline()\n",
+        "print(s,end='')\n",
+        "print(s1,end='')\n"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "PvuO0mRn7Isq",
+        "outputId": "cc294b30-939c-4d6d-a483-25809a802f0d"
+      },
+      "execution_count": 33,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "my name is shrayash \n",
+            "my age is 23 \n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "f=open('/content/files/new1.txt','r')\n",
+        "s=f.read()\n",
+        "\n",
+        "print(s)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "IkzNJ9j27eS9",
+        "outputId": "d0ad0bc9-532f-4a66-c1dd-3055a0a0b107"
+      },
+      "execution_count": 36,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "my name is shrayash \n",
+            "my age is 23 \n",
+            "i m a noob data scientist \n",
+            "\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "f = open('/content/files/new1.txt','r')\n",
+        "while True:\n",
+        "  data = f.readline()\n",
+        "\n",
+        "  if data == '':\n",
+        "    break\n",
+        "  else:\n",
+        "    print(data)\n",
+        "\n",
+        "f.close()"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "kfg2w6dN-KCS",
+        "outputId": "bf54a83b-0856-44c0-a1f0-032432cd64c5"
+      },
+      "execution_count": 37,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "my name is shrayash \n",
+            "\n",
+            "my age is 23 \n",
+            "\n",
+            "i m a noob data scientist \n",
+            "\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "l=['hello' for i in range(100)]\n",
+        "with open('/content/files/new.txt','w') as f:\n",
+        "  f.writelines(l)\n",
+        "\n",
+        "\n",
+        "\n"
+      ],
+      "metadata": {
+        "id": "M6AeSNhO_Dah"
+      },
+      "execution_count": 39,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "with open('/content/files/new.txt','r') as f:\n",
+        "  chunk=10\n",
+        "  while len(f.read(chunk))>0:\n",
+        "    print(f.read(chunk))\n",
+        "    f.read(chunk)\n",
+        "\n"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "E_16_0wAEcVr",
+        "outputId": "91f994c4-dbd9-4eb0-85e7-6d4d1206234b"
+      },
+      "execution_count": 42,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "hellohello\n",
+            "hellohello\n",
+            "hellohello\n",
+            "hellohello\n",
+            "hellohello\n",
+            "hellohello\n",
+            "hellohello\n",
+            "hellohello\n",
+            "hellohello\n",
+            "hellohello\n",
+            "hellohello\n",
+            "hellohello\n",
+            "hellohello\n",
+            "hellohello\n",
+            "hellohello\n",
+            "hellohello\n",
+            "hellohello\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [],
+      "metadata": {
+        "id": "JSrHZGhNE9D-"
+      },
+      "execution_count": null,
+      "outputs": []
+    }
+  ]
+}
